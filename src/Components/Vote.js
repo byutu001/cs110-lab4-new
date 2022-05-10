@@ -5,17 +5,20 @@ function Vote() {
 
   return (
     <>
-      <button onClick={() => {
+      <button className="upvote" onClick={() => {
         setVoteCount(voteCount+1)
       }}>
         Upvote
       </button>
-      <p>{voteCount}</p>
-      <button onClick={() => {
+      
+      <button className="downvote" onClick={() => {
         setVoteCount(voteCount - 1)
       }}>
           Downvote
       </button>
+
+      <div className='voteNum'>{voteCount}</div>
+
     </>
   )
 }

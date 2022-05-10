@@ -16,26 +16,28 @@ const CommentForm = ({
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <textarea
-        className="comment-form-textarea"
-        value={username}
-        placeholder="Name ..."
-        onChange={(e) => setUsername(e.target.value)}
-      />
+    <div className="postForm">
+      <form onSubmit={onSubmit}>
+        <textarea
+          className="comment-form-username"
+          value={username}
+          placeholder="Name ..."
+          onChange={(e) => setUsername(e.target.value)}
+        />
     
-      <textarea
-        className="comment-form-textarea"
-        value={text}
-        placeholder="Write a new post"
-        onChange={(e) => setText(e.target.value)}
-      />
+        <textarea
+          className="comment-form-text"
+          value={text}
+          placeholder="Write a new post..."
+          onChange={(e) => setText(e.target.value)}
+        />
 
-      <button className="comment-form-button" disabled={isTextareaDisabled}>
-        {submitLabel}
-      </button>
+        <button className="comment-form-button" disabled={isTextareaDisabled}>
+          {submitLabel}
+        </button>
       
-    </form>
+     </form>
+    </div>
   );
 };
 

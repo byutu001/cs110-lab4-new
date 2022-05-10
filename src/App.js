@@ -21,6 +21,7 @@ class App extends React.Component { //props, state
     console.log(comments)
     return (
       <div className="App">
+        <div className="comment-form-title">Create Post</div>
         <CommentForm
           submitLabel="Post"
           handleSubmit={(username, text) => {
